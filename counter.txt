@@ -1,0 +1,87 @@
+app.js
+
+// import {Component} from "react";
+import './index.css';
+
+class CounterApp extends Component {
+  state = { count: 0 }
+
+  onDecrement = () => {
+    this.setState((prevState) => ({ count: prevState.count - 1 }));
+  }
+
+  onIncrement = () => {
+    this.setState((prevState) => ({ count: prevState.count + 1 }));
+  }
+
+  render() {
+    const { count } = this.state;
+    return (
+      <div className="app-container">
+        <div className="content-container">
+          <h1 className="heading">Counter</h1>
+          <p className="counter">{count}</p>
+          <div>
+            <button className="decrease" type="button" onClick={this.onDecrement}>Decrease</button>
+            <button className="increase" type="button" onClick={this.onIncrement}>Increase</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default CounterApp;
+
+==================================================================================================================================================
+
+app.csss
+.app-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: rgb(81,243,162);
+  background: linear-gradient(45deg,rgba(81,243,162,1)22%,rgba(96,233,235,1)54%,rgba(0,255,247,1)100%);
+}
+.content-container{
+  display: flex;
+  margin-top: 125px;
+  height: 45vh;
+  border-radius: 20px;
+  min-width: 250px;
+  background-color: white;
+  flex-direction: column;
+  text-align: center;
+}
+.heading{
+  font-size: 35px;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgba(118,123,123);
+}
+.counter{
+  font-size: 45px;
+  font-weight: 600;
+  font-family: "Roboto";
+  color: black;
+}
+.decrease{
+  border-width: 0;
+  border-radius: 16px;
+  color: white;
+  height: 30px;
+  width: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: rgba(244,41,41);
+}
+.increase{
+  border-width: 0;
+  border-radius: 16px;
+  color: white;
+  height: 30px;
+  width: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: greenyellow;
+}

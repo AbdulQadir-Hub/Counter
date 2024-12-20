@@ -1,0 +1,42 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff;
+  font-family: "Arial", sans-serif;
+}
+.content-container {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+.heading {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+.counter {
+  font-size: 3em;
+  color: #007bff;
+  margin: 20px 0;
+}
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.decrease {
+  margin-right: 10px;
+}
